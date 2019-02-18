@@ -13,7 +13,7 @@ An attempt to define a basic default style for the most commonly used HTML eleme
 - modern-normalize v0.5.0 - https://github.com/sindresorhus/modern-normalize
 - cssremedy - https://github.com/mozdevs/cssremedy
 
-👉🏼 Check the source code, it's fully documented
+👉🏼 [Check the source code, it's fully documented](https://github.com/zoontek/sound-mind.css/blob/master/sound-mind.scss)
 
 ## Installation
 
