@@ -1,0 +1,14 @@
+{
+  "name": "sound-mind.css",
+  "version": "0.0.1",
+  "main": "sound-mind.css",
+  "repository": "git@github.com:zoontek/sound-mind.css.css.git",
+  "author": "Mathieu Acthernoene <zoontek@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass ./sound-mind.scss -o . --indent-type space --output-style compressed"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

@@ -1,0 +1,575 @@
+/**
+ * Based on :
+ * normalize.css v8.0.1 - https://github.com/necolas/normalize.css
+ * sanitize.css v6.0.0 - https://github.com/csstools/sanitize.css
+ * modern-normalize v0.5.0 - https://github.com/sindresorhus/modern-normalize
+ * cssremedy - https://github.com/mozdevs/cssremedy
+ */
+
+$dark-grey-color: #999;
+$light-grey-color: #ccc;
+$selection-color: #b3d4fc;
+$base-line-height: 1.5;
+$title-line-height: 1.5;
+
+// 1. Use a better box model (opinionated)
+// 2. Use the default cursor (opinionated)
+// 3. Set a more confortable line-height (opinionated)
+// 4. Breaks words to prevent overflow (opinionated)
+// 5. Prevent adjustments of font size after orientation changes in iOS
+// 6. Remove repeating backgrounds (opinionated)
+
+html {
+  box-sizing: border-box; // 1
+  cursor: pointer; // 2
+  line-height: $base-line-height; // 3
+  word-break: break-word; // 4
+  -webkit-text-size-adjust: 100%; // 5
+}
+
+*,
+*::before,
+*::after {
+  background-repeat: no-repeat; // 6
+  box-sizing: inherit; // 1
+}
+
+// Use a smaller tab size (opinionated)
+
+:root {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+// 1. Add text decoration inheritance (opinionated)
+// 2. Add vertical alignment inheritance (opinionated)
+
+::before,
+::after {
+  text-decoration: inherit; // 1
+  vertical-align: inherit; // 2
+}
+
+// Improve font rendering on HiDPI devices (opinionated)
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+// 1. Force background color, which is sometimes set to the system window
+// background color (opinionated)
+// 2. Use system font stack as default (opinionated)
+
+body {
+  background-color: white; // 1
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // 2
+}
+
+// Correct the font size and margin on `h1` elements within `section` and
+// `article` contexts in Chrome, Firefox, and Safari
+
+h1 {
+  font-size: 2em;
+}
+
+// Set a more confortable line-height (opinionated)
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $title-line-height;
+}
+
+// Remove the border on images inside links in IE 10
+
+img {
+  border-style: none;
+}
+
+// 1. Better looking default styles (opinionated)
+// 2. Show the overflow in Edge and IE
+
+hr {
+  margin: 1em 0; // 1
+  padding: 0; // 1
+  border: 0; // 1
+  border-top: 1px solid $light-grey-color; // 1
+  overflow: visible; // 2
+}
+
+// Hardcode selection style to ensure consistency (opinionated)
+
+::-moz-selection {
+  background-color: $selection-color;
+  color: black;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: $selection-color;
+  color: black;
+  text-shadow: none;
+}
+
+// Remove the gray background on active links in IE 10
+
+a {
+  background-color: transparent;
+}
+
+// 1. Remove the bottom border in Chrome 57-
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
+
+abbr[title] {
+  border-bottom: none; // 1
+  text-decoration: underline; // 2
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+// 1. Use system font stack as default (opinionated)
+// 2. Correct the odd `em` font sizing
+
+code,
+kbd,
+pre,
+samp {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier,
+    monospace; // 1
+  font-size: 1em; // 2
+}
+
+// Add the correct font size
+
+small {
+  font-size: 80%;
+}
+
+// Prevent `sub` and `sup` elements from affecting the line height
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// 1. Change the font styles
+// 2. Set a more confortable line-height (opinionated)
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; // 1
+  font-size: 100%; // 1
+  line-height: $base-line-height; // 2
+}
+
+// Show the overflow in IE & Edge
+
+button,
+input {
+  overflow: visible;
+}
+
+// Switch display mode to block (opinionated)
+
+audio,
+button,
+canvas,
+details,
+dialog,
+embed,
+iframe,
+img,
+input,
+meter,
+object,
+progress,
+select,
+textarea,
+video {
+  display: block;
+}
+
+// Remove the list style on navigation lists (opinionated)
+
+nav ul {
+  list-style: none;
+}
+
+// 1. Ensure to maintain aspect ratio (opinionated)
+// 2. Prevent overflow (opinionated)
+
+canvas,
+embed,
+iframe,
+img,
+legend,
+object,
+select,
+textarea,
+svg,
+video {
+  height: auto; // 1
+  max-width: 100%; // 2
+}
+
+audio {
+  max-width: 100%; // 2
+}
+
+// Remove default margins (opinionated)
+
+dd,
+fieldset,
+button,
+input,
+select,
+textarea,
+body,
+pre,
+dir,
+dl,
+menu,
+ol,
+p,
+blockquote,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+iframe,
+legend,
+optgroup,
+li,
+ul {
+  margin: 0;
+}
+
+// Reduce left padding on list (opinionated)
+
+dir,
+ol,
+ul {
+  padding-left: 2em;
+}
+
+// Lighter and uniform border on all bordered elements (opinionated)
+
+dialog,
+fieldset,
+iframe,
+input,
+select,
+textarea {
+  border: 1px solid $light-grey-color;
+}
+
+// Set a basic and coherent default style (opinionated)
+
+input,
+select,
+textarea {
+  padding: 0 0.25em;
+}
+
+// 1. Remove small paddings in some elements (opinionated)
+// 2. Remove the padding in IE 10
+
+legend, // 1
+ option, // 1
+ menu, // 1
+ [type="checkbox"], // 2
+ [type="radio"] // 2
+ {
+  padding: 0;
+}
+
+// Better looking default styles (opinionated)
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 0.25em;
+  vertical-align: baseline;
+}
+
+// 1. Allow modification of button style (opinionated)
+// 2. Set a basic and coherent default style (opinionated)
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none; // 1
+  -moz-appearance: none; // 1
+  appearance: none; // 1
+  background-color: white; // 2
+  border: 1px solid $light-grey-color; // 2
+  padding: 0 0.25em; // 2
+  text-transform: none; // 2
+}
+
+button:active,
+[type="button"]:active,
+[type="reset"]:active,
+[type="submit"]:active {
+  box-shadow: inset 1px 1px $dark-grey-color; // 2
+  color: inherit; // 2
+}
+
+// 1. Remove the inner border and padding in Firefox
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none; // 1
+  padding: 0; // 1
+}
+
+// Restore the focus styles unset by the previous rule
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+// 1. Correct the inability to style clickable types in iOS and Safari
+// 2. Fix background color in Safari
+// 3. Fix double borders in Webkit browsers
+// 4. Change font properties to `inherit` in Safari
+// 5. Set a basic and coherent default style (opinionated)
+
+::-webkit-file-upload-button {
+  -webkit-appearance: none; // 1
+  appearance: none; // 1
+  background-color: white; // 2
+  border: 0; // 3
+  border-right: 1px solid $light-grey-color; // 3
+  font: inherit; // 4
+}
+
+::-webkit-file-upload-button:active {
+  box-shadow: inset 1px 1px $dark-grey-color; // 5
+  color: inherit; // 4
+}
+
+// 1. Allow modification of button style (opinionated)
+// 2. Set a basic and coherent default style (opinionated)
+// 3. Create a new arrow (opinionated)
+// 3. Remove the inheritance of text transform in Edge, Firefox, and IE
+
+select {
+  -webkit-appearance: none; // 1
+  -moz-appearance: none; // 1
+  appearance: none; // 1
+  background-color: white; // 2
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMCAwaDEwMEw1MCA1MHoiLz48L3N2Zz4="); // 3
+  background-repeat: no-repeat; // 3
+  background-position: calc(100% - 0.2em) calc(50% + 0.15em); // 3
+  background-size: 0.5em auto; // 3
+  border-radius: 0; // 2
+  padding-right: 1em; // 3
+  text-transform: none; // 4
+}
+
+// 1. Correct the padding in Firefox
+// 2. Reset fieldset style correctly (opinionated)
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; // 2
+  min-width: 0; // 2
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell; // 2
+}
+
+// 1. Correct the color inheritance from `fieldset` elements in IE
+// 2. Correct the text wrapping in Edge and IE
+
+legend {
+  color: inherit; // 1
+  display: table; // 2
+  white-space: normal; // 2
+}
+
+// 1. Collapse border spacing (opinionated)
+// 2. remove the default border spacing (opinionated)
+
+table {
+  border-collapse: collapse; // 1
+  border-spacing: 0; // 2
+}
+
+// 1. Remove the default vertical scrollbar in IE 10+
+// 2. Change the resize direction on textareas (opinionated)
+
+textarea {
+  overflow: auto; // 1
+  resize: vertical; // 2
+}
+
+// 1. Remove grey background in Firefox
+// 2. Fix disabled field text color with transparent background in Safari
+
+input:disabled {
+  background-color: transparent; // 1
+  color: $dark-grey-color; // 2
+  -webkit-text-fill-color: currentColor; // 2
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+// 1. Correct the odd appearance in Chrome and Safari
+// 2. Correct the outline style in Safari
+
+[type="search"] {
+  -webkit-appearance: textfield; // 1
+  outline-offset: -2px; // 2
+}
+
+// Remove the inner padding in Chrome and Safari on macOS
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Correct the text style of placeholders in Chrome, Edge, and Safari
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+// Add the correct styles in Edge, IE, and Safari
+
+dialog {
+  background-color: white;
+  color: black;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+// Add the correct display
+
+summary {
+  display: list-item;
+}
+
+// Add the correct display in IE 10+
+
+template {
+  display: none;
+}
+
+// Change the vertical alignment (opinionated)
+
+svg {
+  vertical-align: middle;
+}
+
+// Change the fill color to match the text color (opinionated)
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+// 1. Remove the tapping delay in IE 10
+// 2. Remove the tapping delay on clickable elements (opinionated)
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation; // 1
+  touch-action: manipulation; // 2
+}
+
+// Add the correct display in IE 10
+
+[hidden] {
+  display: none;
+}
+
+// Change the cursor on busy elements (opinionated)
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+// Change the cursor on control elements (opinionated)
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+// Change the cursor on disabled, not-editable, or otherwise
+// inoperable elements (opinionated)
+
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+// Change the display on visually hidden accessible elements
+// in all browsers (opinionated)
+
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
