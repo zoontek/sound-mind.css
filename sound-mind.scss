@@ -404,16 +404,10 @@ select {
   text-transform: none; // 4
 }
 
-// 1. Correct the padding in Firefox
-// 2. Reset fieldset style correctly (opinionated)
+// Correct the padding in Firefox
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em; // 2
-  min-width: 0; // 2
-}
-
-body:not(:-moz-handler-blocked) fieldset {
-  display: table-cell; // 2
+  padding: 0.35em 0.75em 0.625em;
 }
 
 // 1. Correct the color inheritance from `fieldset` elements in IE
