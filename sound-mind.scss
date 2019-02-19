@@ -305,18 +305,18 @@ textarea {
 // 2. Remove the padding in IE 10
 
 legend, // 1
- option, // 1
- menu, // 1
- [type="checkbox"], // 2
- [type="radio"] // 2
+option, // 1
+menu, // 1
+[type="checkbox"], // 2
+[type="radio"] // 2
  {
   padding: 0;
 }
 
 // Better looking default styles (opinionated)
 
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   display: inline-block;
   margin-right: 0.25em;
   vertical-align: baseline;
@@ -346,14 +346,14 @@ button:active,
   color: inherit; // 2
 }
 
-// 1. Remove the inner border and padding in Firefox
+// Remove the inner border and padding in Firefox
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none; // 1
-  padding: 0; // 1
+  border-style: none;
+  padding: 0;
 }
 
 // Restore the focus styles unset by the previous rule
