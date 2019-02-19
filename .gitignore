@@ -2,3 +2,4 @@
 node_modules/
 *.css.map
 sound-mind.css
+yarn-error.log
